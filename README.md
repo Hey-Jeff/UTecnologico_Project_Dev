@@ -16,14 +16,14 @@ Proyecto en **C# / ASP.NET Core MVC (.NET 10)**, **Dapper**, **SQL Server** y vi
 ```powershell
 cd SGC.ApiWeb
 dotnet restore
-# Configura la cadena de conexión de forma local; no guardes contraseñas en git.
+# Configura la cadena de conexión
 dotnet user-secrets set "ConnectionStrings:Principal" "Server=localhost;Database=SGC_UniversoTecnologico;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True;"
 dotnet build
 ```
 
 > `TrustServerCertificate=True` es únicamente una facilidad para **desarrollo local**. En producción instala un certificado válido y usa `Encrypt=True` con confianza de certificados normal.
 
-### Inicializar el primer administrador
+### Inicializar el primer administrador para la pagina
 
 El script SQL crea los **roles**, pero **no** crea una contraseña por defecto. Crea el primer usuario con variables de entorno temporales para que no se guarde un password en el repositorio:
 
@@ -120,25 +120,3 @@ El CRUD de auditoría y la modificación/eliminación de movimientos de inventar
 - Sin CORS abierto. Swagger solo en entorno Development.
 - La API **no expone el hash** de contraseñas; al crear/editar un `Usuario` la interfaz solicita `Contrasena` o `ContrasenaNueva` y el servidor genera el hash.
 - Restricción por roles a nivel de módulos. La autorización fina por permiso individual sigue pendiente de definirse con la empresa, según el documento funcional.
-
-### Importante para desplegar
-
-Este entregable es una **base funcional de desarrollo**, no una implementación auditada de producción. Se necesita probar: permisos reales de cuenta SQL, escenarios de concurrencia, transiciones de estado, protección contra abuso y reglas contractuales aún no confirmadas. La creación del administrador usa SQL directo en modo CLI a propósito; debe ejecutarse una sola vez.
-
-## HTML y MVC
-
-Las vistas están en `Views/Clientes`, `Views/Equipos`, `Views/Articulos`, `Views/Cotizaciones`, `Views/OrdenesTrabajo`, `Views/Inventario`, `Views/VentasAlquileres`, `Views/LecturasMensuales`, `Views/ServiciosTecnicos`, `Views/Usuarios` y `Views/Reportes`.
-
-Todas las pantallas CRUD usan el componente parcial `Views/Shared/_ModuloCrud.cshtml` y el JS `wwwroot/js/crud.js`. Hay navegación responsive, listado paginado, filtros dentro de la página, creación, edición, inactivación y mensajes de validación. Los campos de claves foráneas intentan ofrecer listas de selección, y usan entrada de ID si el rol no puede consultar el catálogo asociado.
-
-## Posibles mejoras posteriores
-
-- Tests de integración mediante `WebApplicationFactory` y SQL Server de prueba.
-- Filtros globales por texto en el servidor y búsqueda paginada con conteo total.
-- Flujo UX detallado para líneas de cotización, contratos y consumo de repuestos.
-- Control detallado de permisos por acción, auditoría de más modificaciones, bloqueo de intentos de login y políticas de contraseñas.
-- Separación API Web y Frontend como proyectos distintos si el sistema crece.
-
-## Acerca de los nombres
-
-Todos los nombres **de entidades y columnas del SQL y de los parámetros de Dapper** están en español. Palabras reservadas de C#, SQL, HTTP, nombres de librerías y claves de configuración requeridas por .NET mantienen su forma estándar.
