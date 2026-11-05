@@ -1,0 +1,70 @@
+@inject CatalogoEntidades Catalogo
+@{
+    string titulo = (ViewData["Title"] as string) ?? "SGC Universo Tecnológico";
+    var modulos = Catalogo.Todas.Where(e => AccesoModulos.Puede(User, e, "Listar")).ToArray();
+    var menuPrincipal = new[] { "Cliente", "Equipo", "Articulo", "MovimientoInventario", "Cotizacion", "OperacionComercial", "SolicitudServicio", "OrdenTrabajo", "LecturaMensual" };
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>@titulo | SGC Universo Tecnológico</title>
+    <link rel="stylesheet" asp-append-version="true" href="~/css/sitio.css" />
+</head>
+<body>
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <div class="aplicacion">
+            <aside class="barra-lateral">
+                <a class="marca" href="/"> <span class="marca-icono">UT</span><span>Universo<br /><strong>Tecnológico</strong></span> </a>
+                <div class="etiqueta-nav">PANEL DE CONTROL</div>
+                <a class="enlace-nav" href="/">Inicio</a>
+                @foreach (var entidad in modulos.Where(e => menuPrincipal.Contains(e.Tabla)))
+                {
+                    <a class="enlace-nav" href="/modulos/@entidad.Ruta">@entidad.Titulo</a>
+                }
+                @if (AccesoModulos.PuedeReporte(User))
+                {
+                    <a class="enlace-nav" href="/Reportes">Reportes</a>
+                }
+                <div class="etiqueta-nav">EXTRAS</div>
+                <a class="enlace-nav" href="/Inicio/Endpoints">Endpoints API</a>
+                @if (User.IsInRole("Administrador"))
+                {
+                    @foreach (var entidad in modulos.Where(e => !menuPrincipal.Contains(e.Tabla)))
+                    {
+                        <a class="enlace-nav enlace-nav-secundario" href="/modulos/@entidad.Ruta">@entidad.Titulo</a>
+                    }
+                }
+                <div class="espaciador"></div>
+                <div class="usuario-lateral">
+                    <div class="usuario-avatar">@(User.Identity?.Name?.Substring(0, 1).ToUpperInvariant())</div>
+                    <div><strong>@User.Identity.Name</strong><small>@string.Join(", ", User.FindAll(System.Security.Claims.ClaimTypes.Role).Select(x => x.Value))</small></div>
+                </div>
+                <form asp-controller="Acceso" asp-action="Salir" method="post">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="enlace-nav boton-salir">Cerrar sesión</button>
+                </form>
+            </aside>
+            <main class="principal">
+                <header class="cabecera">
+                    <div><span class="etiqueta-cabecera">SISTEMA DE GESTIÓN CENTRALIZADO</span><h1>@titulo</h1></div>
+                    <span class="entorno">SGC · ASP.NET Core</span>
+                </header>
+                @Html.AntiForgeryToken()
+                @RenderBody()
+                <footer class="pie">SGC Universo Tecnológico · MVC + Dapper + SQL Server</footer>
+            </main>
+        </div>
+    }
+    else
+    {
+        <main class="inicio-sesion">
+            @RenderBody()
+        </main>
+    }
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

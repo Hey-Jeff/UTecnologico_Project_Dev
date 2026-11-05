@@ -1,0 +1,16 @@
+@model IReadOnlyList<EntidadDefinicion>
+@{ ViewData["Title"] = "Endpoints disponibles"; }
+<section class="tarjeta">
+    <h2>API REST + Dapper</h2>
+    <p>La API expone procedimientos almacenados de SQL Server. Todos los endpoints necesitan autenticación y los permisos correspondientes.</p>
+    <p>Abre <a href="/swagger">Swagger UI</a> en desarrollo para explorar los endpoints y sus métodos.</p>
+    <div class="tabla-scroll">
+        <table class="tabla"><thead><tr><th>Tabla</th><th>Ruta base</th><th>Operaciones</th></tr></thead><tbody>
+            @foreach (var entidad in Model)
+            {
+                <tr><td>@entidad.Esquema.@entidad.Tabla</td><td><code>@entidad.RutaApi</code></td><td>GET · GET /&#123;clave&#125; · POST · PUT · DELETE</td></tr>
+            }
+        </tbody></table>
+    </div>
+    <p class="nota">Las claves compuestas se expresan separadas por comas, por ejemplo <code>/api/seguridad/usuario-rol/1,2</code>. Algunos procesos solo admiten operaciones especializadas, por razones de auditoría.</p>
+</section>

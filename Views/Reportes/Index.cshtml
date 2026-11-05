@@ -1,0 +1,23 @@
+@{ ViewData["Title"] = "Reportes del sistema"; }
+<section class="tarjeta">
+    <div class="barra-herramientas">
+        <div><p class="etiqueta-cabecera">REPORTERÍA</p><h2>Consultas por módulo</h2></div>
+        <button class="boton boton-primario" type="button" id="btnCargar">Ejecutar consulta</button>
+    </div>
+    <div class="filtros fila-filtros">
+        <label>Reporte
+            <select id="tipoReporte">
+                <option value="existencias">Existencias y alertas</option>
+                <option value="cotizaciones">Totales de cotizaciones</option>
+                <option value="ventas">Ventas y alquileres</option>
+                <option value="historial-equipos">Historial técnico de equipos</option>
+            </select>
+        </label>
+        <label>Desde <input type="date" id="desde" /></label>
+        <label>Hasta <input type="date" id="hasta" /></label>
+        <label>ID de equipo <input type="number" min="1" id="idEquipo" /></label>
+    </div>
+    <div id="mensajeReporte" class="mensaje"></div>
+    <div class="tabla-scroll"><table class="tabla" id="tablaReporte"><thead></thead><tbody></tbody></table></div>
+</section>
+@section Scripts { <script src="~/js/reportes.js" asp-append-version="true"></script> }

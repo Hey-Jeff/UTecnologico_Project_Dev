@@ -1,0 +1,29 @@
+@model IReadOnlyList<EntidadDefinicion>
+@{
+    ViewData["Title"] = "Panel principal";
+    var grupos = Model.GroupBy(x => x.Grupo).OrderBy(x => x.Key);
+}
+<div class="tarjeta bienvenida">
+    <div>
+        <p class="etiqueta-cabecera">BIENVENIDO AL SISTEMA</p>
+        <h2>Gestiona todas tus operaciones desde un solo lugar</h2>
+        <p>Clientes, equipos Canon, inventario, cotizaciones, ventas, alquileres y servicio técnico.</p>
+    </div>
+    <div class="decoracion">SGC</div>
+</div>
+<section class="seccion">
+    <div class="titulo-seccion"><h2>Módulos disponibles</h2><span>@Model.Count módulo(s)</span></div>
+    @foreach (var grupo in grupos)
+    {
+        <h3 class="titulo-grupo">@grupo.Key</h3>
+        <div class="cuadricula-modulos">
+            @foreach (var entidad in grupo)
+            {
+                <a class="tarjeta modulo-tarjeta" href="/modulos/@entidad.Ruta">
+                    <div class="circulo-modulo">@(entidad.Titulo[..Math.Min(1, entidad.Titulo.Length)])</div>
+                    <strong>@entidad.Titulo</strong><span>Consultar y gestionar registros</span>
+                </a>
+            }
+        </div>
+    }
+</section>

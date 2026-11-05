@@ -1,0 +1,42 @@
+@model ModeloModulo
+<section class="tarjeta">
+    <div class="barra-herramientas">
+        <div>
+            <p class="etiqueta-cabecera">GESTIÓN DE REGISTROS</p>
+            <h2>@Model.Entidad.Titulo</h2>
+            <p class="texto-discreto">Tabla <code>@Model.Entidad.Esquema.@Model.Entidad.Tabla</code></p>
+        </div>
+        <div class="acciones">
+            <button type="button" id="btnRecargar" class="boton boton-secundario">Actualizar lista</button>
+            @if (!Model.Entidad.SoloLectura)
+            {
+                <button type="button" id="btnCrear" class="boton boton-primario">+ Nuevo registro</button>
+            }
+        </div>
+    </div>
+    <div class="barra-herramientas filtros">
+        <label>Buscar en página <input type="search" id="busqueda" placeholder="Filtrar registros visibles" /></label>
+        <label>Página <input id="pagina" type="number" value="1" min="1" max="10000" /></label>
+        <label>Registros <select id="tamanoPagina"><option>10</option><option selected>25</option><option>50</option><option>100</option></select></label>
+    </div>
+    <div class="mensaje" id="mensaje"></div>
+    <div class="tabla-scroll"><table class="tabla" id="tablaRegistros"><thead></thead><tbody></tbody></table></div>
+    <div class="barra-herramientas pie-tabla"><span id="contador">Cargando datos...</span><div class="acciones"><button class="boton boton-secundario" id="btnAnterior">Anterior</button><button class="boton boton-secundario" id="btnSiguiente">Siguiente</button></div></div>
+</section>
+<section class="tarjeta aviso-modulo">
+    <strong>Reglas de operación</strong>
+    <p>Las operaciones utilizan procedimientos almacenados. Los movimientos de inventario y la bitácora no admiten cambios arbitrarios. Para completar una venta o cerrar una orden, utiliza el botón específico de negocio.</p>
+</section>
+<dialog id="modalRegistro" class="modal-registro">
+    <form method="dialog"><button id="btnCerrarModal" class="cerrar-modal" aria-label="Cerrar">×</button></form>
+    <h2 id="tituloModal">Nuevo registro</h2>
+    <p class="texto-discreto">Los campos obligatorios se marcan con *.</p>
+    <form id="formularioRegistro" class="formulario-campos">
+        <div id="camposFormulario" class="cuadricula-formulario"></div>
+        <div class="acciones acciones-formulario"><button type="button" class="boton boton-secundario" id="btnCancelar">Cancelar</button><button type="submit" class="boton boton-primario" id="btnGuardar">Guardar</button></div>
+    </form>
+</dialog>
+<script>
+window.sgcEntidad = @Html.Raw(JsonSerializer.Serialize(Model.Entidad));
+</script>
+<script src="~/js/crud.js" asp-append-version="true"></script>

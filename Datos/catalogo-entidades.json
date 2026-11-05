@@ -1,0 +1,5244 @@
+[
+  {
+    "Esquema": "seguridad",
+    "Tabla": "Rol",
+    "Nombre": "Rol",
+    "Ruta": "rol",
+    "RutaApi": "/api/seguridad/rol",
+    "Titulo": "Rol",
+    "Claves": [
+      "IdRol"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdRol",
+        "Titulo": "Id Rol",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreRol",
+        "Titulo": "Nombre Rol",
+        "TipoSql": "NVARCHAR(80)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "DescripcionRol",
+        "Titulo": "Descripcion Rol",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreRol",
+          "TipoSql": "NVARCHAR(80)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionRol",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreRol",
+          "TipoSql": "NVARCHAR(80)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionRol",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Seguridad"
+  },
+  {
+    "Esquema": "seguridad",
+    "Tabla": "Permiso",
+    "Nombre": "Permiso",
+    "Ruta": "permiso",
+    "RutaApi": "/api/seguridad/permiso",
+    "Titulo": "Permiso",
+    "Claves": [
+      "IdPermiso"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdPermiso",
+        "Titulo": "Id Permiso",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "CodigoPermiso",
+        "Titulo": "Codigo Permiso",
+        "TipoSql": "NVARCHAR(50)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombrePermiso",
+        "Titulo": "Nombre Permiso",
+        "TipoSql": "NVARCHAR(120)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "DescripcionPermiso",
+        "Titulo": "Descripcion Permiso",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "CodigoPermiso",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombrePermiso",
+          "TipoSql": "NVARCHAR(120)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionPermiso",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CodigoPermiso",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombrePermiso",
+          "TipoSql": "NVARCHAR(120)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionPermiso",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Seguridad"
+  },
+  {
+    "Esquema": "seguridad",
+    "Tabla": "RolPermiso",
+    "Nombre": "RolPermiso",
+    "Ruta": "rol-permiso",
+    "RutaApi": "/api/seguridad/rol-permiso",
+    "Titulo": "Rol Permiso",
+    "Claves": [
+      "IdRol",
+      "IdPermiso"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdRol",
+        "Titulo": "Id Rol",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": true,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Rol",
+          "CampoDestino": "IdRol"
+        }
+      },
+      {
+        "Nombre": "IdPermiso",
+        "Titulo": "Id Permiso",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": true,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Permiso",
+          "CampoDestino": "IdPermiso"
+        }
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Nuevo_IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Nuevo_IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdPermiso",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Seguridad"
+  },
+  {
+    "Esquema": "seguridad",
+    "Tabla": "Usuario",
+    "Nombre": "Usuario",
+    "Ruta": "usuario",
+    "RutaApi": "/api/seguridad/usuario",
+    "Titulo": "Usuario",
+    "Claves": [
+      "IdUsuario"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdUsuario",
+        "Titulo": "Id Usuario",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreUsuario",
+        "Titulo": "Nombre Usuario",
+        "TipoSql": "NVARCHAR(50)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "ResumenCriptograficoContrasena",
+        "Titulo": "Resumen Criptografico Contrasena",
+        "TipoSql": "NVARCHAR(255)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreCompleto",
+        "Titulo": "Nombre Completo",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "CorreoElectronico",
+        "Titulo": "Correo Electronico",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Telefono",
+        "Titulo": "Telefono",
+        "TipoSql": "NVARCHAR(30)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaActualizacion",
+        "Titulo": "Fecha Actualizacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreUsuario",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "ResumenCriptograficoContrasena",
+          "TipoSql": "NVARCHAR(255)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreCompleto",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CorreoElectronico",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Telefono",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreUsuario",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "ResumenCriptograficoContrasena",
+          "TipoSql": "NVARCHAR(255)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreCompleto",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CorreoElectronico",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Telefono",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Seguridad"
+  },
+  {
+    "Esquema": "seguridad",
+    "Tabla": "UsuarioRol",
+    "Nombre": "UsuarioRol",
+    "Ruta": "usuario-rol",
+    "RutaApi": "/api/seguridad/usuario-rol",
+    "Titulo": "Usuario Rol",
+    "Claves": [
+      "IdUsuario",
+      "IdRol"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdUsuario",
+        "Titulo": "Id Usuario",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": true,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "IdRol",
+        "Titulo": "Id Rol",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": true,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Rol",
+          "CampoDestino": "IdRol"
+        }
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Nuevo_IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Nuevo_IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdRol",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Seguridad"
+  },
+  {
+    "Esquema": "seguridad",
+    "Tabla": "BitacoraEvento",
+    "Nombre": "BitacoraEvento",
+    "Ruta": "bitacora-evento",
+    "RutaApi": "/api/seguridad/bitacora-evento",
+    "Titulo": "Bitacora Evento",
+    "Claves": [
+      "IdBitacoraEvento"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdBitacoraEvento",
+        "Titulo": "Id Bitacora Evento",
+        "TipoSql": "BIGINT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdUsuario",
+        "Titulo": "Id Usuario",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "NombreEntidad",
+        "Titulo": "Nombre Entidad",
+        "TipoSql": "NVARCHAR(128)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "ClaveRegistro",
+        "Titulo": "Clave Registro",
+        "TipoSql": "NVARCHAR(128)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "TipoAccion",
+        "Titulo": "Tipo Accion",
+        "TipoSql": "NVARCHAR(50)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaAccion",
+        "Titulo": "Fecha Accion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Comentario",
+        "Titulo": "Comentario",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreEntidad",
+          "TipoSql": "NVARCHAR(128)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "TipoAccion",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "ClaveRegistro",
+          "TipoSql": "NVARCHAR(128)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Comentario",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdBitacoraEvento",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdBitacoraEvento",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdBitacoraEvento",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": true,
+    "Grupo": "Seguridad"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "Cliente",
+    "Nombre": "Cliente",
+    "Ruta": "cliente",
+    "RutaApi": "/api/catalogos/cliente",
+    "Titulo": "Cliente",
+    "Claves": [
+      "IdCliente"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdCliente",
+        "Titulo": "Id Cliente",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Identificacion",
+        "Titulo": "Id entificacion",
+        "TipoSql": "NVARCHAR(50)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreORazonSocial",
+        "Titulo": "Nombre  o razón Social",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreContacto",
+        "Titulo": "Nombre Contacto",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Telefono",
+        "Titulo": "Telefono",
+        "TipoSql": "NVARCHAR(30)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "CorreoElectronico",
+        "Titulo": "Correo Electronico",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Direccion",
+        "Titulo": "Direccion",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaActualizacion",
+        "Titulo": "Fecha Actualizacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "Identificacion",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreORazonSocial",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Telefono",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CorreoElectronico",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Direccion",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreContacto",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Identificacion",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreORazonSocial",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreContacto",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Telefono",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CorreoElectronico",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Direccion",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "Prospecto",
+    "Nombre": "Prospecto",
+    "Ruta": "prospecto",
+    "RutaApi": "/api/catalogos/prospecto",
+    "Titulo": "Prospecto",
+    "Claves": [
+      "IdProspecto"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdProspecto",
+        "Titulo": "Id Prospecto",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreProspecto",
+        "Titulo": "Nombre Prospecto",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Identificacion",
+        "Titulo": "Id entificacion",
+        "TipoSql": "NVARCHAR(50)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Telefono",
+        "Titulo": "Telefono",
+        "TipoSql": "NVARCHAR(30)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "CorreoElectronico",
+        "Titulo": "Correo Electronico",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Direccion",
+        "Titulo": "Direccion",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaActualizacion",
+        "Titulo": "Fecha Actualizacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreProspecto",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Identificacion",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Telefono",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "CorreoElectronico",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Direccion",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdProspecto",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdProspecto",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreProspecto",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Identificacion",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Telefono",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CorreoElectronico",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Direccion",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdProspecto",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "Marca",
+    "Nombre": "Marca",
+    "Ruta": "marca",
+    "RutaApi": "/api/catalogos/marca",
+    "Titulo": "Marca",
+    "Claves": [
+      "IdMarca"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdMarca",
+        "Titulo": "Id Marca",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreMarca",
+        "Titulo": "Nombre Marca",
+        "TipoSql": "NVARCHAR(80)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreMarca",
+          "TipoSql": "NVARCHAR(80)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdMarca",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdMarca",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreMarca",
+          "TipoSql": "NVARCHAR(80)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdMarca",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "EstadoEquipo",
+    "Nombre": "EstadoEquipo",
+    "Ruta": "estado-equipo",
+    "RutaApi": "/api/catalogos/estado-equipo",
+    "Titulo": "Estado Equipo",
+    "Claves": [
+      "IdEstadoEquipo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdEstadoEquipo",
+        "Titulo": "Id Estado Equipo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreEstado",
+        "Titulo": "Nombre Estado",
+        "TipoSql": "NVARCHAR(60)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(60)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdEstadoEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdEstadoEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(60)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdEstadoEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "ModeloEquipo",
+    "Nombre": "ModeloEquipo",
+    "Ruta": "modelo-equipo",
+    "RutaApi": "/api/catalogos/modelo-equipo",
+    "Titulo": "Modelo Equipo",
+    "Claves": [
+      "IdModeloEquipo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdModeloEquipo",
+        "Titulo": "Id Modelo Equipo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdMarca",
+        "Titulo": "Id Marca",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Marca",
+          "CampoDestino": "IdMarca"
+        }
+      },
+      {
+        "Nombre": "NombreModelo",
+        "Titulo": "Nombre Modelo",
+        "TipoSql": "NVARCHAR(100)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "DescripcionModelo",
+        "Titulo": "Descripcion Modelo",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdMarca",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreModelo",
+          "TipoSql": "NVARCHAR(100)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionModelo",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdMarca",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreModelo",
+          "TipoSql": "NVARCHAR(100)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionModelo",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "Equipo",
+    "Nombre": "Equipo",
+    "Ruta": "equipo",
+    "RutaApi": "/api/catalogos/equipo",
+    "Titulo": "Equipo",
+    "Claves": [
+      "IdEquipo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdEquipo",
+        "Titulo": "Id Equipo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdCliente",
+        "Titulo": "Id Cliente",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Cliente",
+          "CampoDestino": "IdCliente"
+        }
+      },
+      {
+        "Nombre": "IdModeloEquipo",
+        "Titulo": "Id Modelo Equipo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.ModeloEquipo",
+          "CampoDestino": "IdModeloEquipo"
+        }
+      },
+      {
+        "Nombre": "NumeroSerie",
+        "Titulo": "Numero Serie",
+        "TipoSql": "NVARCHAR(100)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "UbicacionFisica",
+        "Titulo": "Ubicacion Fisica",
+        "TipoSql": "NVARCHAR(200)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdEstadoEquipo",
+        "Titulo": "Id Estado Equipo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.EstadoEquipo",
+          "CampoDestino": "IdEstadoEquipo"
+        }
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaActualizacion",
+        "Titulo": "Fecha Actualizacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "UbicacionFisica",
+          "TipoSql": "NVARCHAR(200)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NumeroSerie",
+          "TipoSql": "NVARCHAR(100)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NumeroSerie",
+          "TipoSql": "NVARCHAR(100)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "UbicacionFisica",
+          "TipoSql": "NVARCHAR(200)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "UnidadMedida",
+    "Nombre": "UnidadMedida",
+    "Ruta": "unidad-medida",
+    "RutaApi": "/api/catalogos/unidad-medida",
+    "Titulo": "Unidad Medida",
+    "Claves": [
+      "IdUnidadMedida"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdUnidadMedida",
+        "Titulo": "Id Unidad Medida",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "CodigoUnidad",
+        "Titulo": "Codigo Unidad",
+        "TipoSql": "NVARCHAR(20)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreUnidad",
+        "Titulo": "Nombre Unidad",
+        "TipoSql": "NVARCHAR(60)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "CodigoUnidad",
+          "TipoSql": "NVARCHAR(20)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreUnidad",
+          "TipoSql": "NVARCHAR(60)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdUnidadMedida",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdUnidadMedida",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CodigoUnidad",
+          "TipoSql": "NVARCHAR(20)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreUnidad",
+          "TipoSql": "NVARCHAR(60)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdUnidadMedida",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "TipoArticulo",
+    "Nombre": "TipoArticulo",
+    "Ruta": "tipo-articulo",
+    "RutaApi": "/api/catalogos/tipo-articulo",
+    "Titulo": "Tipo Articulo",
+    "Claves": [
+      "IdTipoArticulo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdTipoArticulo",
+        "Titulo": "Id Tipo Articulo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreTipo",
+        "Titulo": "Nombre Tipo",
+        "TipoSql": "NVARCHAR(60)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreTipo",
+          "TipoSql": "NVARCHAR(60)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdTipoArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdTipoArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreTipo",
+          "TipoSql": "NVARCHAR(60)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdTipoArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "Articulo",
+    "Nombre": "Articulo",
+    "Ruta": "articulo",
+    "RutaApi": "/api/catalogos/articulo",
+    "Titulo": "Articulo",
+    "Claves": [
+      "IdArticulo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdArticulo",
+        "Titulo": "Id Articulo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "CodigoArticulo",
+        "Titulo": "Codigo Articulo",
+        "TipoSql": "NVARCHAR(50)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreArticulo",
+        "Titulo": "Nombre Articulo",
+        "TipoSql": "NVARCHAR(150)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "DescripcionArticulo",
+        "Titulo": "Descripcion Articulo",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdTipoArticulo",
+        "Titulo": "Id Tipo Articulo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.TipoArticulo",
+          "CampoDestino": "IdTipoArticulo"
+        }
+      },
+      {
+        "Nombre": "IdUnidadMedida",
+        "Titulo": "Id Unidad Medida",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.UnidadMedida",
+          "CampoDestino": "IdUnidadMedida"
+        }
+      },
+      {
+        "Nombre": "CostoUnitario",
+        "Titulo": "Costo Unitario",
+        "TipoSql": "DECIMAL(18,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "ExistenciaMinima",
+        "Titulo": "Existencia Minima",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaActualizacion",
+        "Titulo": "Fecha Actualizacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "CodigoArticulo",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreArticulo",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdTipoArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUnidadMedida",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CostoUnitario",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionArticulo",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "ExistenciaMinima",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CodigoArticulo",
+          "TipoSql": "NVARCHAR(50)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreArticulo",
+          "TipoSql": "NVARCHAR(150)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionArticulo",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdTipoArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUnidadMedida",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CostoUnitario",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "ExistenciaMinima",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "catalogos",
+    "Tabla": "CompatibilidadRepuesto",
+    "Nombre": "CompatibilidadRepuesto",
+    "Ruta": "compatibilidad-repuesto",
+    "RutaApi": "/api/catalogos/compatibilidad-repuesto",
+    "Titulo": "Compatibilidad Repuesto",
+    "Claves": [
+      "IdArticulo",
+      "IdModeloEquipo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdArticulo",
+        "Titulo": "Id Articulo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": true,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Articulo",
+          "CampoDestino": "IdArticulo"
+        }
+      },
+      {
+        "Nombre": "IdModeloEquipo",
+        "Titulo": "Id Modelo Equipo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": true,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.ModeloEquipo",
+          "CampoDestino": "IdModeloEquipo"
+        }
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Nuevo_IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Nuevo_IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdModeloEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Clientes y catálogos"
+  },
+  {
+    "Esquema": "inventario",
+    "Tabla": "TipoMovimiento",
+    "Nombre": "TipoMovimiento",
+    "Ruta": "tipo-movimiento",
+    "RutaApi": "/api/inventario/tipo-movimiento",
+    "Titulo": "Tipo Movimiento",
+    "Claves": [
+      "IdTipoMovimiento"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdTipoMovimiento",
+        "Titulo": "Id Tipo Movimiento",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreTipo",
+        "Titulo": "Nombre Tipo",
+        "TipoSql": "NVARCHAR(30)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreTipo",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdTipoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdTipoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreTipo",
+          "TipoSql": "NVARCHAR(30)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdTipoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Inventario"
+  },
+  {
+    "Esquema": "inventario",
+    "Tabla": "MotivoMovimiento",
+    "Nombre": "MotivoMovimiento",
+    "Ruta": "motivo-movimiento",
+    "RutaApi": "/api/inventario/motivo-movimiento",
+    "Titulo": "Motivo Movimiento",
+    "Claves": [
+      "IdMotivoMovimiento"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdMotivoMovimiento",
+        "Titulo": "Id Motivo Movimiento",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdTipoMovimiento",
+        "Titulo": "Id Tipo Movimiento",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "inventario.TipoMovimiento",
+          "CampoDestino": "IdTipoMovimiento"
+        }
+      },
+      {
+        "Nombre": "NombreMotivo",
+        "Titulo": "Nombre Motivo",
+        "TipoSql": "NVARCHAR(80)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "DescripcionMotivo",
+        "Titulo": "Descripcion Motivo",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdTipoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreMotivo",
+          "TipoSql": "NVARCHAR(80)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionMotivo",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdMotivoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdMotivoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdTipoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreMotivo",
+          "TipoSql": "NVARCHAR(80)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionMotivo",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdMotivoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Inventario"
+  },
+  {
+    "Esquema": "inventario",
+    "Tabla": "MovimientoInventario",
+    "Nombre": "MovimientoInventario",
+    "Ruta": "movimiento-inventario",
+    "RutaApi": "/api/inventario/movimiento-inventario",
+    "Titulo": "Movimiento Inventario",
+    "Claves": [
+      "IdMovimientoInventario"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdMovimientoInventario",
+        "Titulo": "Id Movimiento Inventario",
+        "TipoSql": "BIGINT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdArticulo",
+        "Titulo": "Id Articulo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Articulo",
+          "CampoDestino": "IdArticulo"
+        }
+      },
+      {
+        "Nombre": "IdMotivoMovimiento",
+        "Titulo": "Id Motivo Movimiento",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "inventario.MotivoMovimiento",
+          "CampoDestino": "IdMotivoMovimiento"
+        }
+      },
+      {
+        "Nombre": "Cantidad",
+        "Titulo": "Cantidad",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaMovimiento",
+        "Titulo": "Fecha Movimiento",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdUsuario",
+        "Titulo": "Id Usuario",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "EntidadReferencia",
+        "Titulo": "Entidad Referencia",
+        "TipoSql": "NVARCHAR(60)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdReferencia",
+        "Titulo": "Id Referencia",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Observaciones",
+        "Titulo": "Observaciones",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdMotivoMovimiento",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Cantidad",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuario",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "EntidadReferencia",
+          "TipoSql": "NVARCHAR(60)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "IdReferencia",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdMovimientoInventario",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdMovimientoInventario",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdMovimientoInventario",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Inventario"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "EstadoCotizacion",
+    "Nombre": "EstadoCotizacion",
+    "Ruta": "estado-cotizacion",
+    "RutaApi": "/api/comercial/estado-cotizacion",
+    "Titulo": "Estado Cotizacion",
+    "Claves": [
+      "IdEstadoCotizacion"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdEstadoCotizacion",
+        "Titulo": "Id Estado Cotizacion",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreEstado",
+        "Titulo": "Nombre Estado",
+        "TipoSql": "NVARCHAR(40)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdEstadoCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdEstadoCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdEstadoCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "Cotizacion",
+    "Nombre": "Cotizacion",
+    "Ruta": "cotizacion",
+    "RutaApi": "/api/comercial/cotizacion",
+    "Titulo": "Cotizacion",
+    "Claves": [
+      "IdCotizacion"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdCotizacion",
+        "Titulo": "Id Cotizacion",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdCliente",
+        "Titulo": "Id Cliente",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Cliente",
+          "CampoDestino": "IdCliente"
+        }
+      },
+      {
+        "Nombre": "IdProspecto",
+        "Titulo": "Id Prospecto",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Prospecto",
+          "CampoDestino": "IdProspecto"
+        }
+      },
+      {
+        "Nombre": "FechaCotizacion",
+        "Titulo": "Fecha Cotizacion",
+        "TipoSql": "DATE",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaVencimiento",
+        "Titulo": "Fecha Vencimiento",
+        "TipoSql": "DATE",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdEstadoCotizacion",
+        "Titulo": "Id Estado Cotizacion",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.EstadoCotizacion",
+          "CampoDestino": "IdEstadoCotizacion"
+        }
+      },
+      {
+        "Nombre": "Observaciones",
+        "Titulo": "Observaciones",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdUsuarioCreador",
+        "Titulo": "Id Usuario Creador",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdEstadoCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioCreador",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "IdProspecto",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "FechaCotizacion",
+          "TipoSql": "DATE",
+          "Opcional": true
+        },
+        {
+          "Nombre": "FechaVencimiento",
+          "TipoSql": "DATE",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdProspecto",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaCotizacion",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaVencimiento",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "DetalleCotizacion",
+    "Nombre": "DetalleCotizacion",
+    "Ruta": "detalle-cotizacion",
+    "RutaApi": "/api/comercial/detalle-cotizacion",
+    "Titulo": "Detalle Cotizacion",
+    "Claves": [
+      "IdDetalleCotizacion"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdDetalleCotizacion",
+        "Titulo": "Id Detalle Cotizacion",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdCotizacion",
+        "Titulo": "Id Cotizacion",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.Cotizacion",
+          "CampoDestino": "IdCotizacion"
+        }
+      },
+      {
+        "Nombre": "NumeroLinea",
+        "Titulo": "Numero Linea",
+        "TipoSql": "SMALLINT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdArticulo",
+        "Titulo": "Id Articulo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Articulo",
+          "CampoDestino": "IdArticulo"
+        }
+      },
+      {
+        "Nombre": "DescripcionLinea",
+        "Titulo": "Descripcion Linea",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Cantidad",
+        "Titulo": "Cantidad",
+        "TipoSql": "DECIMAL(18,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "PrecioUnitario",
+        "Titulo": "Precio Unitario",
+        "TipoSql": "DECIMAL(18,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "PorcentajeImpuesto",
+        "Titulo": "Porcentaje Impuesto",
+        "TipoSql": "DECIMAL(5,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NumeroLinea",
+          "TipoSql": "SMALLINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionLinea",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Cantidad",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "PrecioUnitario",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "PorcentajeImpuesto",
+          "TipoSql": "DECIMAL(5,2)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdDetalleCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdDetalleCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NumeroLinea",
+          "TipoSql": "SMALLINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionLinea",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Cantidad",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "PrecioUnitario",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "PorcentajeImpuesto",
+          "TipoSql": "DECIMAL(5,2)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdDetalleCotizacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "TipoOperacion",
+    "Nombre": "TipoOperacion",
+    "Ruta": "tipo-operacion",
+    "RutaApi": "/api/comercial/tipo-operacion",
+    "Titulo": "Tipo Operacion",
+    "Claves": [
+      "IdTipoOperacion"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdTipoOperacion",
+        "Titulo": "Id Tipo Operacion",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreTipo",
+        "Titulo": "Nombre Tipo",
+        "TipoSql": "NVARCHAR(40)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreTipo",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdTipoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdTipoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreTipo",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdTipoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "EstadoOperacion",
+    "Nombre": "EstadoOperacion",
+    "Ruta": "estado-operacion",
+    "RutaApi": "/api/comercial/estado-operacion",
+    "Titulo": "Estado Operacion",
+    "Claves": [
+      "IdEstadoOperacion"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdEstadoOperacion",
+        "Titulo": "Id Estado Operacion",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreEstado",
+        "Titulo": "Nombre Estado",
+        "TipoSql": "NVARCHAR(40)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdEstadoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdEstadoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdEstadoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "OperacionComercial",
+    "Nombre": "OperacionComercial",
+    "Ruta": "operacion-comercial",
+    "RutaApi": "/api/comercial/operacion-comercial",
+    "Titulo": "Operacion Comercial",
+    "Claves": [
+      "IdOperacion"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdOperacion",
+        "Titulo": "Id Operacion",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdCliente",
+        "Titulo": "Id Cliente",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Cliente",
+          "CampoDestino": "IdCliente"
+        }
+      },
+      {
+        "Nombre": "IdTipoOperacion",
+        "Titulo": "Id Tipo Operacion",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.TipoOperacion",
+          "CampoDestino": "IdTipoOperacion"
+        }
+      },
+      {
+        "Nombre": "IdEstadoOperacion",
+        "Titulo": "Id Estado Operacion",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.EstadoOperacion",
+          "CampoDestino": "IdEstadoOperacion"
+        }
+      },
+      {
+        "Nombre": "IdCotizacionOrigen",
+        "Titulo": "Id Cotizacion Origen",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.Cotizacion",
+          "CampoDestino": "IdCotizacion"
+        }
+      },
+      {
+        "Nombre": "FechaOperacion",
+        "Titulo": "Fecha Operacion",
+        "TipoSql": "DATE",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Observaciones",
+        "Titulo": "Observaciones",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdUsuarioCreador",
+        "Titulo": "Id Usuario Creador",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdTipoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioCreador",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCotizacionOrigen",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "FechaOperacion",
+          "TipoSql": "DATE",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdTipoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCotizacionOrigen",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaOperacion",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "DetalleOperacion",
+    "Nombre": "DetalleOperacion",
+    "Ruta": "detalle-operacion",
+    "RutaApi": "/api/comercial/detalle-operacion",
+    "Titulo": "Detalle Operacion",
+    "Claves": [
+      "IdDetalleOperacion"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdDetalleOperacion",
+        "Titulo": "Id Detalle Operacion",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdOperacion",
+        "Titulo": "Id Operacion",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.OperacionComercial",
+          "CampoDestino": "IdOperacion"
+        }
+      },
+      {
+        "Nombre": "NumeroLinea",
+        "Titulo": "Numero Linea",
+        "TipoSql": "SMALLINT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdArticulo",
+        "Titulo": "Id Articulo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Articulo",
+          "CampoDestino": "IdArticulo"
+        }
+      },
+      {
+        "Nombre": "IdEquipo",
+        "Titulo": "Id Equipo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Equipo",
+          "CampoDestino": "IdEquipo"
+        }
+      },
+      {
+        "Nombre": "DescripcionLinea",
+        "Titulo": "Descripcion Linea",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Cantidad",
+        "Titulo": "Cantidad",
+        "TipoSql": "DECIMAL(18,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "PrecioUnitario",
+        "Titulo": "Precio Unitario",
+        "TipoSql": "DECIMAL(18,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "PorcentajeImpuesto",
+        "Titulo": "Porcentaje Impuesto",
+        "TipoSql": "DECIMAL(5,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NumeroLinea",
+          "TipoSql": "SMALLINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionLinea",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Cantidad",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "PrecioUnitario",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "PorcentajeImpuesto",
+          "TipoSql": "DECIMAL(5,2)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdDetalleOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdDetalleOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NumeroLinea",
+          "TipoSql": "SMALLINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionLinea",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Cantidad",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "PrecioUnitario",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "PorcentajeImpuesto",
+          "TipoSql": "DECIMAL(5,2)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdDetalleOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "Garantia",
+    "Nombre": "Garantia",
+    "Ruta": "garantia",
+    "RutaApi": "/api/comercial/garantia",
+    "Titulo": "Garantia",
+    "Claves": [
+      "IdGarantia"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdGarantia",
+        "Titulo": "Id Garantia",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdDetalleOperacion",
+        "Titulo": "Id Detalle Operacion",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.DetalleOperacion",
+          "CampoDestino": "IdDetalleOperacion"
+        }
+      },
+      {
+        "Nombre": "FechaInicio",
+        "Titulo": "Fecha Inicio",
+        "TipoSql": "DATE",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "MesesCobertura",
+        "Titulo": "Meses Cobertura",
+        "TipoSql": "TINYINT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "DescripcionCobertura",
+        "Titulo": "Descripcion Cobertura",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdDetalleOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaInicio",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionCobertura",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "MesesCobertura",
+          "TipoSql": "TINYINT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdGarantia",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdGarantia",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdDetalleOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaInicio",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "MesesCobertura",
+          "TipoSql": "TINYINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionCobertura",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdGarantia",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "ContratoAlquiler",
+    "Nombre": "ContratoAlquiler",
+    "Ruta": "contrato-alquiler",
+    "RutaApi": "/api/comercial/contrato-alquiler",
+    "Titulo": "Contrato Alquiler",
+    "Claves": [
+      "IdContratoAlquiler"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdContratoAlquiler",
+        "Titulo": "Id Contrato Alquiler",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdOperacion",
+        "Titulo": "Id Operacion",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.OperacionComercial",
+          "CampoDestino": "IdOperacion"
+        }
+      },
+      {
+        "Nombre": "FechaInicio",
+        "Titulo": "Fecha Inicio",
+        "TipoSql": "DATE",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaFin",
+        "Titulo": "Fecha Fin",
+        "TipoSql": "DATE",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "ObservacionesContrato",
+        "Titulo": "Observaciones Contrato",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaInicio",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaFin",
+          "TipoSql": "DATE",
+          "Opcional": true
+        },
+        {
+          "Nombre": "ObservacionesContrato",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdOperacion",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaInicio",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaFin",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "ObservacionesContrato",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "comercial",
+    "Tabla": "EquipoContratoAlquiler",
+    "Nombre": "EquipoContratoAlquiler",
+    "Ruta": "equipo-contrato-alquiler",
+    "RutaApi": "/api/comercial/equipo-contrato-alquiler",
+    "Titulo": "Equipo Contrato Alquiler",
+    "Claves": [
+      "IdEquipoContratoAlquiler"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdEquipoContratoAlquiler",
+        "Titulo": "Id Equipo Contrato Alquiler",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdContratoAlquiler",
+        "Titulo": "Id Contrato Alquiler",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.ContratoAlquiler",
+          "CampoDestino": "IdContratoAlquiler"
+        }
+      },
+      {
+        "Nombre": "IdEquipo",
+        "Titulo": "Id Equipo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Equipo",
+          "CampoDestino": "IdEquipo"
+        }
+      },
+      {
+        "Nombre": "CuotaMensual",
+        "Titulo": "Cuota Mensual",
+        "TipoSql": "DECIMAL(18,2)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Activo",
+        "Titulo": "Activo",
+        "TipoSql": "BIT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CuotaMensual",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdEquipoContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdEquipoContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CuotaMensual",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Activo",
+          "TipoSql": "BIT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdEquipoContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Comercial"
+  },
+  {
+    "Esquema": "servicio_tecnico",
+    "Tabla": "EstadoSolicitudServicio",
+    "Nombre": "EstadoSolicitudServicio",
+    "Ruta": "estado-solicitud-servicio",
+    "RutaApi": "/api/servicio-tecnico/estado-solicitud-servicio",
+    "Titulo": "Estado Solicitud Servicio",
+    "Claves": [
+      "IdEstadoSolicitudServicio"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdEstadoSolicitudServicio",
+        "Titulo": "Id Estado Solicitud Servicio",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreEstado",
+        "Titulo": "Nombre Estado",
+        "TipoSql": "NVARCHAR(40)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdEstadoSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdEstadoSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdEstadoSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Servicio técnico"
+  },
+  {
+    "Esquema": "servicio_tecnico",
+    "Tabla": "SolicitudServicio",
+    "Nombre": "SolicitudServicio",
+    "Ruta": "solicitud-servicio",
+    "RutaApi": "/api/servicio-tecnico/solicitud-servicio",
+    "Titulo": "Solicitud Servicio",
+    "Claves": [
+      "IdSolicitudServicio"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdSolicitudServicio",
+        "Titulo": "Id Solicitud Servicio",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdCliente",
+        "Titulo": "Id Cliente",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Cliente",
+          "CampoDestino": "IdCliente"
+        }
+      },
+      {
+        "Nombre": "IdEquipo",
+        "Titulo": "Id Equipo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Equipo",
+          "CampoDestino": "IdEquipo"
+        }
+      },
+      {
+        "Nombre": "FechaSolicitud",
+        "Titulo": "Fecha Solicitud",
+        "TipoSql": "DATE",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "DescripcionProblema",
+        "Titulo": "Descripcion Problema",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Diagnostico",
+        "Titulo": "Diagnostico",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdUsuarioTecnicoAsignado",
+        "Titulo": "Id Usuario Tecnico Asignado",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "FechaAtencionProgramada",
+        "Titulo": "Fecha Atencion Programada",
+        "TipoSql": "DATE",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdEstadoSolicitudServicio",
+        "Titulo": "Id Estado Solicitud Servicio",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "servicio_tecnico.EstadoSolicitudServicio",
+          "CampoDestino": "IdEstadoSolicitudServicio"
+        }
+      },
+      {
+        "Nombre": "IdUsuarioCreador",
+        "Titulo": "Id Usuario Creador",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "FechaCreacion",
+        "Titulo": "Fecha Creacion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioCreador",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaSolicitud",
+          "TipoSql": "DATE",
+          "Opcional": true
+        },
+        {
+          "Nombre": "DescripcionProblema",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Diagnostico",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "IdUsuarioTecnicoAsignado",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "FechaAtencionProgramada",
+          "TipoSql": "DATE",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdCliente",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEquipo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaSolicitud",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "DescripcionProblema",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Diagnostico",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioTecnicoAsignado",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaAtencionProgramada",
+          "TipoSql": "DATE",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Servicio técnico"
+  },
+  {
+    "Esquema": "servicio_tecnico",
+    "Tabla": "EstadoOrdenTrabajo",
+    "Nombre": "EstadoOrdenTrabajo",
+    "Ruta": "estado-orden-trabajo",
+    "RutaApi": "/api/servicio-tecnico/estado-orden-trabajo",
+    "Titulo": "Estado Orden Trabajo",
+    "Claves": [
+      "IdEstadoOrdenTrabajo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdEstadoOrdenTrabajo",
+        "Titulo": "Id Estado Orden Trabajo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "NombreEstado",
+        "Titulo": "Nombre Estado",
+        "TipoSql": "NVARCHAR(40)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdEstadoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdEstadoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "NombreEstado",
+          "TipoSql": "NVARCHAR(40)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdEstadoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Servicio técnico"
+  },
+  {
+    "Esquema": "servicio_tecnico",
+    "Tabla": "OrdenTrabajo",
+    "Nombre": "OrdenTrabajo",
+    "Ruta": "orden-trabajo",
+    "RutaApi": "/api/servicio-tecnico/orden-trabajo",
+    "Titulo": "Orden Trabajo",
+    "Claves": [
+      "IdOrdenTrabajo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdOrdenTrabajo",
+        "Titulo": "Id Orden Trabajo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdSolicitudServicio",
+        "Titulo": "Id Solicitud Servicio",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "servicio_tecnico.SolicitudServicio",
+          "CampoDestino": "IdSolicitudServicio"
+        }
+      },
+      {
+        "Nombre": "IdEstadoOrdenTrabajo",
+        "Titulo": "Id Estado Orden Trabajo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "servicio_tecnico.EstadoOrdenTrabajo",
+          "CampoDestino": "IdEstadoOrdenTrabajo"
+        }
+      },
+      {
+        "Nombre": "IdUsuarioResponsable",
+        "Titulo": "Id Usuario Responsable",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "FechaApertura",
+        "Titulo": "Fecha Apertura",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaAtencion",
+        "Titulo": "Fecha Atencion",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaCierre",
+        "Titulo": "Fecha Cierre",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaAplicacionInventario",
+        "Titulo": "Fecha Aplicacion Inventario",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Observaciones",
+        "Titulo": "Observaciones",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioResponsable",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "FechaAtencion",
+          "TipoSql": "DATETIME2(0)",
+          "Opcional": true
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdSolicitudServicio",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdEstadoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioResponsable",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "FechaAtencion",
+          "TipoSql": "DATETIME2(0)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Servicio técnico"
+  },
+  {
+    "Esquema": "servicio_tecnico",
+    "Tabla": "AvanceOrdenTrabajo",
+    "Nombre": "AvanceOrdenTrabajo",
+    "Ruta": "avance-orden-trabajo",
+    "RutaApi": "/api/servicio-tecnico/avance-orden-trabajo",
+    "Titulo": "Avance Orden Trabajo",
+    "Claves": [
+      "IdAvanceOrdenTrabajo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdAvanceOrdenTrabajo",
+        "Titulo": "Id Avance Orden Trabajo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdOrdenTrabajo",
+        "Titulo": "Id Orden Trabajo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "servicio_tecnico.OrdenTrabajo",
+          "CampoDestino": "IdOrdenTrabajo"
+        }
+      },
+      {
+        "Nombre": "FechaAvance",
+        "Titulo": "Fecha Avance",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Observaciones",
+        "Titulo": "Observaciones",
+        "TipoSql": "NVARCHAR(400)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "MinutosTrabajados",
+        "Titulo": "Minutos Trabajados",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdUsuarioRegistro",
+        "Titulo": "Id Usuario Registro",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioRegistro",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "MinutosTrabajados",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdAvanceOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdAvanceOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(400)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "MinutosTrabajados",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdAvanceOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Servicio técnico"
+  },
+  {
+    "Esquema": "servicio_tecnico",
+    "Tabla": "RepuestoOrdenTrabajo",
+    "Nombre": "RepuestoOrdenTrabajo",
+    "Ruta": "repuesto-orden-trabajo",
+    "RutaApi": "/api/servicio-tecnico/repuesto-orden-trabajo",
+    "Titulo": "Repuesto Orden Trabajo",
+    "Claves": [
+      "IdRepuestoOrdenTrabajo"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdRepuestoOrdenTrabajo",
+        "Titulo": "Id Repuesto Orden Trabajo",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdOrdenTrabajo",
+        "Titulo": "Id Orden Trabajo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "servicio_tecnico.OrdenTrabajo",
+          "CampoDestino": "IdOrdenTrabajo"
+        }
+      },
+      {
+        "Nombre": "IdArticulo",
+        "Titulo": "Id Articulo",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "catalogos.Articulo",
+          "CampoDestino": "IdArticulo"
+        }
+      },
+      {
+        "Nombre": "Cantidad",
+        "Titulo": "Cantidad",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "CostoUnitarioAlUso",
+        "Titulo": "Costo Unitario Al Uso",
+        "TipoSql": "DECIMAL(18,2)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "Observaciones",
+        "Titulo": "Observaciones",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Cantidad",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CostoUnitarioAlUso",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdRepuestoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdRepuestoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdArticulo",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Cantidad",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "CostoUnitarioAlUso",
+          "TipoSql": "DECIMAL(18,2)",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": false
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdRepuestoOrdenTrabajo",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Servicio técnico"
+  },
+  {
+    "Esquema": "operaciones",
+    "Tabla": "LecturaMensual",
+    "Nombre": "LecturaMensual",
+    "Ruta": "lectura-mensual",
+    "RutaApi": "/api/operaciones/lectura-mensual",
+    "Titulo": "Lectura Mensual",
+    "Claves": [
+      "IdLecturaMensual"
+    ],
+    "Campos": [
+      {
+        "Nombre": "IdLecturaMensual",
+        "Titulo": "Id Lectura Mensual",
+        "TipoSql": "INT",
+        "Nullable": true,
+        "EsClave": true,
+        "Autoincremental": true,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdEquipoContratoAlquiler",
+        "Titulo": "Id Equipo Contrato Alquiler",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "comercial.EquipoContratoAlquiler",
+          "CampoDestino": "IdEquipoContratoAlquiler"
+        }
+      },
+      {
+        "Nombre": "AnioLectura",
+        "Titulo": "Año Lectura",
+        "TipoSql": "SMALLINT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "MesLectura",
+        "Titulo": "Mes Lectura",
+        "TipoSql": "TINYINT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "ValorLectura",
+        "Titulo": "Valor Lectura",
+        "TipoSql": "BIGINT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "FechaRegistro",
+        "Titulo": "Fecha Registro",
+        "TipoSql": "DATETIME2(0)",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      },
+      {
+        "Nombre": "IdUsuarioLectura",
+        "Titulo": "Id Usuario Lectura",
+        "TipoSql": "INT",
+        "Nullable": false,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": {
+          "TablaDestino": "seguridad.Usuario",
+          "CampoDestino": "IdUsuario"
+        }
+      },
+      {
+        "Nombre": "Observaciones",
+        "Titulo": "Observaciones",
+        "TipoSql": "NVARCHAR(250)",
+        "Nullable": true,
+        "EsClave": false,
+        "Autoincremental": false,
+        "Referencia": null
+      }
+    ],
+    "Parametros": {
+      "Crear": [
+        {
+          "Nombre": "IdEquipoContratoAlquiler",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "AnioLectura",
+          "TipoSql": "SMALLINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "MesLectura",
+          "TipoSql": "TINYINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "ValorLectura",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioLectura",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        }
+      ],
+      "ObtenerPorId": [
+        {
+          "Nombre": "IdLecturaMensual",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ],
+      "Listar": [
+        {
+          "Nombre": "Pagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        },
+        {
+          "Nombre": "TamanoPagina",
+          "TipoSql": "INT",
+          "Opcional": true
+        }
+      ],
+      "Actualizar": [
+        {
+          "Nombre": "IdLecturaMensual",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "ValorLectura",
+          "TipoSql": "BIGINT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "Observaciones",
+          "TipoSql": "NVARCHAR(250)",
+          "Opcional": true
+        }
+      ],
+      "Eliminar": [
+        {
+          "Nombre": "IdLecturaMensual",
+          "TipoSql": "INT",
+          "Opcional": false
+        },
+        {
+          "Nombre": "IdUsuarioResponsable",
+          "TipoSql": "INT",
+          "Opcional": false
+        }
+      ]
+    },
+    "SoloLectura": false,
+    "Grupo": "Lecturas"
+  }
+]
